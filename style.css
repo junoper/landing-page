@@ -1,6 +1,7 @@
 /*Maybe add a variable here for consistent padding?*/
 
-body, header, .header_links, .introduction_container, .introduction_container_text {
+body, header, .header_links, .introduction, .introduction_text, .examples,
+ .examples_container, .examples_container_info {
     display: flex;
 }
 
@@ -39,27 +40,63 @@ a {
     background-color: blue;
 }
 
-.introduction_container{
+.introduction{
+    background-color: blue;
     justify-content: center;
     align-items: center;
     height: 20rem;
-    gap: 10rem;
+    gap: 8rem;
+    flex-wrap: wrap;
 }
 
-.introduction_container_text {
+.introduction_text {
     flex-direction: column;
     justify-content: space-evenly;
+    align-items: center;
     gap: 2rem;
 }
 
-.introduction_container_text h1,
-.introduction_container_text p,
-.introduction_container_text button {
+.introduction_text h1,
+.introduction_text p,
+.introduction_text button {
   margin: 0;
 }
 
+.introduction_text button {
+  padding: 0.5em 2em;
+  max-width: 10em;
+  box-sizing: border-box;
+}
 
-.introduction_container_img { /*Maybe try adding a border / making it circular*/
+.introduction_img { /*Maybe try adding a border / making it circular*/
     max-height: 80%;
 }
 
+.examples {
+    flex-direction: column;
+    align-items: center;
+    height: 20rem;
+    padding: 0.5em 2em;
+    gap: 1rem;
+}
+
+.examples_container {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.examples_container_info {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.examples_container_info img{
+    height: 50%;
+    max-width: 80%;
+    border: 1px solid #eee;
+    box-shadow: 2px 4px 16px rgba(0,0,0,.06);
+    border-radius: 4px;
+    padding: 5px;
+}
