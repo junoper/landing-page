@@ -1,7 +1,6 @@
 /*Maybe add a variable here for consistent padding?*/
 
-body, header, .header_links, .introduction, .introduction_text, .examples,
- .examples_container, .examples_container_info {
+body, header, footer {
     display: flex;
 }
 
@@ -20,14 +19,6 @@ header {
     padding: 0 6rem;
 }
 
-.header_img{
-    height: 80%;
-}
-
-.header_links {
-    gap: 2rem;
-}
-
 ul {
     list-style-type: none;
 }
@@ -36,9 +27,27 @@ a {
     text-decoration: none;
 }
 
-.introduction{
-    background-color: blue;
+footer {
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    padding: 0 6rem;
 }
+
+.header_links, .introduction, .introduction_text, .examples,
+ .examples_container, .examples_container_info, .quote, .quote_container, .resources,
+ .resources_container, .resources_text {
+    display: flex;
+ }
+
+.header_img{
+    height: 80%;
+}
+
+.header_links {
+    gap: 2rem;
+}
+
 
 .introduction{
     background-color: blue;
@@ -47,6 +56,7 @@ a {
     height: 20rem;
     gap: 8rem;
     flex-wrap: wrap;
+    padding: 0 6rem;
 }
 
 .introduction_text {
@@ -72,16 +82,22 @@ a {
     max-height: 80%;
 }
 
-.examples {
+.examples { /*Figure out how to get the subtitle h2 to align better*/
+    background: oklch(88.835% 0.13021 112.122);
     flex-direction: column;
     align-items: center;
-    height: 20rem;
-    padding: 0.5em 2em;
+    min-height: 30rem;
+    padding: 0 6rem;
     gap: 1rem;
+}
+
+.examples_text h2 {
+    margin: 0;
 }
 
 .examples_container {
     justify-content: center;
+    align-items: flex-end;
     flex-wrap: wrap;
     gap: 0.5rem;
 }
@@ -93,10 +109,60 @@ a {
 }
 
 .examples_container_info img{
-    height: 50%;
-    max-width: 80%;
+    width: 300px;   /* or 200px */
+    height: 300px;
+    overflow: hidden;
     border: 1px solid #eee;
     box-shadow: 2px 4px 16px rgba(0,0,0,.06);
     border-radius: 4px;
     padding: 5px;
+}
+
+.quote {
+    justify-content: center;
+    padding: 0 6rem;
+}
+
+.quote_container {
+    width: 35%;
+    flex-direction: column;
+    background-image: url("./images/the-water-lily-pond-quote.jpg");
+    box-shadow: 0px 0px 5px 9px white inset;
+    border-radius: 10%;
+    background-size: cover;
+    padding: 3rem;
+}
+
+.quote_text{
+    font-size: 1.5rem;
+}
+
+.quote_name{
+    font-size: 1.25rem;
+    font-weight: 800;
+    text-align: right;
+}
+
+.resources {
+    min-height: 15rem;
+    background-color: lightcoral;
+    justify-content: center;
+    align-items: center;
+    padding: 1 6rem;
+}
+
+.resources_container {
+    height: 70%;
+    background-color: blue;
+    min-width: 20%;
+    padding: 1rem 4rem;
+    justify-content: space-evenly;
+}
+
+.resources_text {
+    flex-direction: column;
+}
+
+.fancy{
+    font-family: Georgia;
 }
