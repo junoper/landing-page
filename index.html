@@ -11,18 +11,20 @@
     <header>
         <img class ="header_img" src="./images/monet-autograph.png" alt="monet's autograph as site logo">
         <ul class="header_links">
-            <li><a href="#">CHANGE - link one</a></li>
-            <li><a href="#">CHANGE - link two</a></li>
-            <li><a href="#">CHANGE - link three</a></li>    
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#example">Examples</a></li>
+            <li><a href="#quote">Quote</a></li>    
         </ul>
         </div>
     </header>
 
     <div class="introduction">
         <div class="introduction_text">
-            <h1 class="fancy">This website is awesome</h1>
-            <p>This website has some subtext</p>
-            <button>Sign up</button>
+            <h1 class="fancy" id="intro">This is Claude Monet</h1>
+            <p>A French painter and founder of the Impressionism movement.</p>
+            <a href="https://en.wikipedia.org/wiki/Claude_Monet" title="Claude Monet Wikipedia">
+                <button>Learn more</button>
+            </a>    
         </div>
         <img class="introduction_img" src="./images/self-portrait.jpg" 
         alt="self-portrait by monet">
@@ -31,31 +33,31 @@
 
     <div class="examples">
         <div class="examples_text">
-            <h2 class="fancy">This is a subtitle</h2>
+            <h2 class="fancy" id="example">Examples of his Work</h2>
         </div>
         <div class="examples_container">
             <div class="examples_container_info">
                 <img src ="./images/banks-of-seine.jpg" alt="painting of the banks of the seine">
-                <p>explanatory text</p>
+                <p>A Spot On The Banks Of The Seine</p>
             </div>
             <div class="examples_container_info">
                 <img src ="./images/the-water-lily-pond.jpg" alt="painting of the water lily pond">
-                <p>explanatory text</p>
+                <p>The Water Lily Pond</p>
             </div>            
             <div class="examples_container_info">
                 <img src ="./images/the-willow.jpg" alt="painting of the Willow">
-                <p>explanatory text</p>
+                <p>The Willow</p>
             </div>
             <div class="examples_container_info">
                 <img src ="./images/irises.jpg" alt="painting of irises">
-                <p>explanatory text</p>
+                <p>Irises in Monet's Garden</p>
             </div>
         </div>
     </div>
 
     <div class="quote">
         <div class="quote_container">
-            <p class="quote_text"> This is a long and inspiring quote that I will put up.
+            <p class="quote_text" id="quote"> Je n'ai fait que regarder ce que m'a montré l'univers.
             </p>
             <p class="quote_name", class="fancy">- Claude Monet</p>
         </div>
@@ -64,10 +66,12 @@
     <div class="resources">
         <div class="resources_container">
             <div class="resources_text">
-                <p class="main_text">Call to action smd</p>
-                <p class="subtext">Suscribe etc. lol</p>
+                <p class="main_text">More of his work can be found at</p>
+                <p class="sub_text">claudemonetgallery.org</p>
             </div>
-            <button class="resources_button">Click here lol</button>
+            <a href="https://claudemonetgallery.org/" title="claudemonetgallery.org">
+                <button class="resources_button">Click here to visit</button>
+            </a>
         </div>
     </div>
 
