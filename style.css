@@ -51,20 +51,18 @@ button:hover {
     background-color: #2e437e;
 }
 
-.header_links, .introduction, .introduction_text, .examples,
- .examples_container, .examples_container_info, .quote, .quote_container, .resources,
- .resources_container, .resources_text {
-    display: flex;
- }
-
 .header_img{
     height: 90%;
 }
 
 .header_links {
     gap: 2rem;
+    display: flex;
 }
 
+.introduction, .introduction_text {
+    display: flex;
+}
 
 .introduction{
     background-color: #c3c6bf;
@@ -111,6 +109,10 @@ button:hover {
     border-radius: 10%;
 }
 
+.examples, .examples_container, .examples_container_info{
+    display: flex;
+ }
+
 .examples { /*Figure out how to get the subtitle h2 to align better*/
     background: #ece6d9;
     flex-direction: column;
@@ -123,14 +125,15 @@ button:hover {
 .examples_text h2 {
     margin: 0.5rem;
     font-size: 2rem;
-    font-weight: 900px;
+    font-weight: 900;
 }
 
 .examples_container {
     justify-content: center;
     align-items: flex-end;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 2rem;
+    
 }
 
 .examples_container_info {
@@ -147,6 +150,17 @@ button:hover {
     box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.121);
     border-radius: 4px;
     padding: 5px;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.examples_container_info img:hover {
+    transform: scale(1.10);
+    box-shadow: 6px 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.quote, .quote_container {
+    display: flex;
 }
 
 .quote {
@@ -156,7 +170,7 @@ button:hover {
 }
 
 .quote_container {
-    width: 35%;
+    max-width: 50%;
     flex-direction: column;
     background-image: url("./images/the-water-lily-pond-quote.jpg");
     box-shadow: 0px 0px 5px 9px  #ece6d9;
@@ -169,7 +183,7 @@ button:hover {
     color: white;
     font-weight: 500;
     font-size: 1.75rem;
-    margin-bottom: 0;
+    margin-bottom: 0.25rem;
 }
 
 .quote_name{
@@ -179,6 +193,10 @@ button:hover {
     text-align: right;
     margin-top: 0;
 }
+
+ .resources, .resources_container, .resources_text {
+    display: flex;
+ }
 
 .resources {
     background: #ece6d9;
